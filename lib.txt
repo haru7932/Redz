@@ -1125,7 +1125,8 @@ function redzlib:MakeWindow(Configs)
 			Size = UDim2.new(0, 13, 0, 13),
 			AnchorPoint = Vector2.new(0, 0.5),
 			Image = TIcon or "",
-			BackgroundTransparency = 1,
+            BackgroundColor3 = Theme["Color Text"],
+            BackgroundTransparency = 1,
 			ImageTransparency = (FirstTab and 0.3) or 0
 		}), "Text")
 		
@@ -2138,3 +2139,4 @@ end
 end
 
 return redzlib
+
