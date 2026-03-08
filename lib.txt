@@ -74,7 +74,7 @@ local redzlib = {
 	Options = {},
 	Flags = {},
 	Tabs = {},
-	Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/icons.lua",true))()
+	Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/haru7932/Lxnny-Hub/refs/heads/main/icons.lua",true))()
 }
 
 local ViewportSize = workspace.CurrentCamera.ViewportSize
@@ -2169,6 +2169,7 @@ end
 end
 
 return redzlib
+
 
 
 
