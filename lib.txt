@@ -1833,7 +1833,37 @@ end
     end
     return Label
 end
-    
+
+
+        function Tab:AddSizeDropdown()
+            return Tab:AddDropdown({
+                Name = "Select UI Size",
+                Options = {"Small", "Medium", "Large"},
+                Default = "Medium",
+                Callback = function(Value)
+                    if Value == "Small" then
+                        MainFrame.Size = UDim2.fromOffset(450, 300)
+                    elseif Value == "Medium" then
+                        MainFrame.Size = UDim2.fromOffset(550, 380)
+                    elseif Value == "Large" then
+                        MainFrame.Size = UDim2.fromOffset(630, 440)
+                    end
+                end
+            })
+        end
+
+
+        function Tab:AddThemeDropdown()
+            return Tab:AddDropdown({
+                Name = "Theme",
+                Description = "",
+                Options = {"Blue", "Darker", "Dark", "Purple"},
+                Default = "Blue",
+                Callback = function(Value)
+                   redzlib:SetTheme(Value)
+                end
+            })
+        end
     
 		function Tab:AddSlider(Configs)
 			local SName = Configs[1] or Configs.Name or Configs.Title or "Slider!"
@@ -2139,5 +2169,6 @@ end
 end
 
 return redzlib
+
 
 
