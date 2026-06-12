@@ -1612,7 +1612,7 @@ end
 				Position = UDim2.new(1, -10, 0.5),
 				AnchorPoint = Vector2.new(1, 0.5),
 				BackgroundTransparency = 1,
-				Image = "rbxassetid://126463403744337"
+				Image = "rbxassetid://10734974297"
 			})
 			
 			FButton.Activated:Connect(function()
