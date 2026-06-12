@@ -2296,7 +2296,6 @@ function Tab:AddDiscordInvite(Configs)
 		Name = "Option",
 		BackgroundTransparency = 1
 	})
-	Make("Corner", InviteHolder, UDim.new(0, 12))	
 	
 	local InviteLabel = InsertTheme(Create("TextLabel", InviteHolder, {
 		Size = UDim2.new(1, 0, 0, 15),
@@ -2317,12 +2316,12 @@ function Tab:AddDiscordInvite(Configs)
 		ClipsDescendants = true
 	}), "Frame")
 	Make("Corner", MainFrame, UDim.new(0, 12))
-	Make("Stroke", MainFrame)
+	Make("Stroke", MainFrame, Color3.fromRGB(95, 15, 255))
 	
 	local BannerArea = Create("ImageLabel", MainFrame, {
 		Size = UDim2.new(1, 0, 0.28, 0),
 		Image = BannerImage,
-		BackgroundColor3 = Color3.fromRGB(88, 101, 242),
+		BackgroundColor3 = Color3.fromRGB(95, 15, 255),
 		BackgroundTransparency = BannerImage ~= "" and 1 or 0,
 		ScaleType = Enum.ScaleType.Crop
 	})
@@ -2464,7 +2463,7 @@ function Tab:AddDiscordInvite(Configs)
 		Text = "Join Server",
 		Font = Enum.Font.GothamBold,
 		TextSize = 10,
-		BackgroundColor3 = Color3.fromRGB(67, 181, 129),
+		BackgroundColor3 = Color3.fromRGB(95, 15, 255),
 		TextColor3 = Theme["Color Text"]
 	}), "Text")
 	Make("Corner", JoinButton, UDim.new(0.5, 0))
