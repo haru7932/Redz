@@ -2288,7 +2288,7 @@ function Tab:AddDiscordInvite(Configs)
 		ClipsDescendants = true
 	}), "Frame")
 	Make("Corner", MainFrame, UDim.new(0, 12))
-	Make("Stroke", MainFrame, Color3.fromRGB(95, 15, 255))
+	Make("Stroke", MainFrame)
 	
 	local BannerArea = Create("ImageLabel", MainFrame, {
 		Size = UDim2.new(1, 0, 0.28, 0),
