@@ -1250,8 +1250,8 @@ AddEle("Button", function(parent, props, ...)
 	}), props), "Frame")
 	
     Make("Stroke", New, {
-        Color = Theme["Color Stroke 2"]
-		Transparency = 0.6,
+        Color = Theme["Color Stroke 2"],
+		Transparency = 0.6
     })	
 
 	local OriginalSize = New.Size
