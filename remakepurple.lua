@@ -45,7 +45,7 @@ local redzlib = {
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
-			["Color Stroke 2"] = Color3.fromRGB(95, 20, 255),
+			["Color Stroke 2"] = Color3.fromRGB(145, 145, 145),
 			["Color Theme"] = Color3.fromRGB(95, 20, 255),
 			["Color Text"] = Color3.fromRGB(240, 240, 240),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180),
@@ -1251,6 +1251,7 @@ AddEle("Button", function(parent, props, ...)
 	
     Make("Stroke", New, {
         Color = Theme["Color Stroke 2"]
+		Transparency = 0.6,
     })	
 
 	local OriginalSize = New.Size
