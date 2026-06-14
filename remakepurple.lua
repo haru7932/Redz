@@ -45,7 +45,7 @@ local redzlib = {
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
-			["Color Stroke 2"] = Color3.fromRGB(145, 145, 145),
+			["Color Stroke 2"] = Color3.fromRGB(95, 20, 255),
 			["Color Theme"] = Color3.fromRGB(95, 20, 255),
 			["Color Text"] = Color3.fromRGB(240, 240, 240),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180),
@@ -1234,6 +1234,7 @@ AddEle("Stroke", function(parent, props, ...)
 	local args = {...}
 	local New = InsertTheme(SetProps(Create("UIStroke", parent, {
 		Color = args[1] or Theme["Color Stroke"],
+        Transparency = 0.7
 		Thickness = args[2] or 1,
 		ApplyStrokeMode = "Border"
 	}), props), "Stroke")
@@ -1250,8 +1251,7 @@ AddEle("Button", function(parent, props, ...)
 	}), props), "Frame")
 	
     Make("Stroke", New, {
-        Color = Theme["Color Stroke 2"],
-		Transparency = 0.6
+        Color = Theme["Color Stroke 2"]
     })	
 
 	local OriginalSize = New.Size
