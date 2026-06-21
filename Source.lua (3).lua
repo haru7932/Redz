@@ -1458,10 +1458,10 @@ function redzlib:MakeWindow(Configs)
 		AutomaticSize = "XY",
 		Text = WTitle,
 		TextXAlignment = "Left",
-		TextSize = 12,
+		TextSize = 13,
 		TextColor3 = Theme["Color Text"],
 		BackgroundTransparency = 1,
-		Font = Enum.Font.GothamMedium,
+		Font = Enum.Font.SourceSansBold,
 		Name = "Title"
 	}, {
 		InsertTheme(Create("TextLabel", {
@@ -1670,7 +1670,7 @@ function redzlib:MakeWindow(Configs)
 			AnchorPoint = Vector2.new(0.5, 0.5)
 		}, {
 			InsertTheme(Create("TextLabel", {
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				Size = UDim2.new(1, 0, 0, 20),
 				Text = DTitle,
 				TextXAlignment = "Left",
@@ -1686,7 +1686,7 @@ function redzlib:MakeWindow(Configs)
 				Text = DText,
 				TextXAlignment = "Left",
 				TextColor3 = Theme["Color Dark Text"],
-				TextSize = 12,
+				TextSize = 11,
 				Position = UDim2.fromOffset(15, 25),
 				BackgroundTransparency = 1,
 				TextWrapped = true
@@ -1733,9 +1733,9 @@ function redzlib:MakeWindow(Configs)
 			Make("Corner", Button)
 			SetProps(Button, {
 				Text = Name,
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				TextColor3 = Theme["Color Text"],
-				TextSize = 12
+				TextSize = 11
 			})
 			
 			for _,Button in pairs(ButtonsHolder:GetChildren()) do
@@ -1898,7 +1898,7 @@ function redzlib:MakeWindow(Configs)
 			})
 			
 			local SectionLabel = InsertTheme(Create("TextLabel", SectionFrame, {
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				Text = SectionName,
 				TextColor3 = Theme["Color Text"],
 				Size = UDim2.new(1, -25, 1, 0),
@@ -2083,7 +2083,7 @@ function redzlib:MakeWindow(Configs)
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				BackgroundTransparency = 1,
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				TextScaled = true,
 				TextColor3 = Theme["Color Text"],
 				Text = "..."
@@ -2303,7 +2303,7 @@ function redzlib:MakeWindow(Configs)
 						Position = UDim2.new(0, 10),
 						Text = Name,
 						TextColor3 = Theme["Color Text"],
-						Font = Enum.Font.GothamBold,
+						Font = Enum.Font.SourceSans,
 						TextXAlignment = "Left",
 						BackgroundTransparency = 1,
 						TextTransparency = 0.4
@@ -2455,7 +2455,7 @@ function redzlib:MakeWindow(Configs)
 				BackgroundTransparency = 1,
 				TextColor3 = Theme["Color Text"],
 				Font = Enum.Font.FredokaOne,
-				TextSize = 12
+				TextSize = 11
 			}), "Text")
 			
 			local UIScale = Create("UIScale", LabelVal)
@@ -2564,7 +2564,7 @@ function redzlib:MakeWindow(Configs)
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				BackgroundTransparency = 1,
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				TextScaled = true,
 				TextColor3 = Theme["Color Text"],
 				ClearTextOnFocus = TClearText,
@@ -2620,7 +2620,7 @@ function redzlib:MakeWindow(Configs)
 				Size = UDim2.new(1, 0, 0, 15),
 				Position = UDim2.new(0, 5),
 				TextColor3 = Color3.fromRGB(40, 150, 255),
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
 				TextSize = 10,
@@ -2644,7 +2644,7 @@ function redzlib:MakeWindow(Configs)
 			local LTitle = InsertTheme(Create("TextLabel", FrameHolder, {
 				Size = UDim2.new(1, -52, 0, 15),
 				Position = UDim2.new(0, 44, 0, 7),
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.SourceSans,
 				TextColor3 = Theme["Color Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
@@ -2670,8 +2670,8 @@ function redzlib:MakeWindow(Configs)
 				AnchorPoint = Vector2.new(0.5, 1),
 				Position = UDim2.new(0.5, 0, 1, -7),
 				Text = "Join",
-				Font = Enum.Font.GothamBold,
-				TextSize = 12,
+				Font = Enum.Font.SourceSans,
+				TextSize = 11,
 				TextColor3 = Color3.fromRGB(220, 220, 220),
 				BackgroundColor3 = Color3.fromRGB(50, 150, 50)
 			})Make("Corner", JoinButton, UDim.new(0, 5))
