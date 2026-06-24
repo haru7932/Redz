@@ -800,7 +800,7 @@ function redzlib:MakeWindow(Configs)
 		AutomaticSize = "XY",
 		Text = WTitle,
 		TextXAlignment = "Left",
-		TextSize = 12,
+		TextSize = 13,
 		TextColor3 = Theme["Color Text"],
 		BackgroundTransparency = 1,
 		Font = Enum.Font.GothamBold,  --GothamMedium
@@ -1679,11 +1679,11 @@ end
 				Funcs:FireCallback(Callback, Default)
 				if Default then
 					CreateTween({Toggle, "Position", UDim2.new(1, 0, 0.5), 0.25})
-					CreateTween({Toggle, "BackgroundTransparency", 0, 0.25})
+					CreateTween({Toggle, "BackgroundTransparency", 0.2, 0.25})
 					CreateTween({Toggle, "AnchorPoint", Vector2.new(1, 0.5), 0.25, Wait or false})
 				else
 					CreateTween({Toggle, "Position", UDim2.new(0, 0, 0.5), 0.25})
-					CreateTween({Toggle, "BackgroundTransparency", 0.8, 0.25})
+					CreateTween({Toggle, "BackgroundTransparency", 0.2, 0.25})
 					CreateTween({Toggle, "AnchorPoint", Vector2.new(0, 0.5), 0.25, Wait or false})
 				end
 				WaitClick = false
