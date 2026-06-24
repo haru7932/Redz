@@ -456,44 +456,6 @@ AddEle("Button", function(parent, props, ...)
 	return New
 end)
 
-AddEle("Page", function(parent, props, ...)
-	local args = {...}
-	local New = InsertTheme(SetProps(Create("TextButton", parent, {
-		Text = "",
-		Size = UDim2.fromScale(1, 1),
-		BackgroundColor3 = Theme["Color Tab"],
-		AutoButtonColor = false
-	}), props), "Frame")
-
-	local OriginalSize = New.Size
-	local IsMouseOver = false
-
-	New.MouseEnter:Connect(function()
-		IsMouseOver = true
-		New.BackgroundTransparency = 0.4
-	end)
-	
-	New.MouseLeave:Connect(function()
-		IsMouseOver = false
-		New.BackgroundTransparency = 0
-	end)
-
-	New.MouseButton1Down:Connect(function()
-		CreateTween({New, "Size", OriginalSize - UDim2.fromOffset(4, 2), 0.1})
-		CreateTween({New, "BackgroundTransparency", 0.6, 0.1})
-	end)
-
-	New.MouseButton1Up:Connect(function()
-		CreateTween({New, "Size", OriginalSize, 0.15})
-		CreateTween({New, "BackgroundTransparency", IsMouseOver and 0.4 or 0, 0.15})
-	end)
-
-	if args[1] then
-		New.Activated:Connect(args[1])
-	end
-
-	return New
-end)
 AddEle("Gradient", function(parent, props, ...)
 	local args = {...}
 	local New = InsertTheme(SetProps(Create("UIGradient", parent, {
@@ -501,62 +463,6 @@ AddEle("Gradient", function(parent, props, ...)
 	}), props), "Gradient")
 	return New
 end)
-
-local function PageFrame(Instance, Title, Description, HolderSize)
-	local TitleL = InsertTheme(Create("TextLabel", {
-		Font = Enum.Font.FredokaOne, --GothamMedium
-		TextColor3 = Theme["Color Text"],
-		Size = UDim2.new(1, -20),
-		AutomaticSize = "Y",
-		Position = UDim2.new(0, 0, 0.5),
-		AnchorPoint = Vector2.new(0, 0.5),
-		BackgroundTransparency = 1,
-		TextTruncate = "AtEnd",
-		TextSize = 10,
-		TextXAlignment = "Left",
-		Text = "",
-		RichText = true
-	}), "Text")
-	
-	local DescL = InsertTheme(Create("TextLabel", {
-		Font = Enum.Font.Gotham,
-		TextColor3 = Theme["Color Dark Text"],
-		Size = UDim2.new(1, -20),
-		AutomaticSize = "Y",
-		Position = UDim2.new(0, 12, 0, 15),
-		BackgroundTransparency = 1,
-		TextWrapped = true,
-		TextSize = 8,
-		TextXAlignment = "Left",
-		Text = "",
-		RichText = true
-	}), "DarkText")
-
-	local Frame = Make("Page", Instance, {
-		Size = UDim2.new(1, 0, 0, 25),
-		AutomaticSize = "Y",
-		Name = "Option"
-	})Make("Corner", Frame, UDim.new(0, 6))
-	
-	LabelHolder = Create("Frame", Frame, {
-		AutomaticSize = "Y",
-		BackgroundTransparency = 1,
-		Size = HolderSize,
-		Position = UDim2.new(0, 10, 0),
-		AnchorPoint = Vector2.new(0, 0)
-	}, {
-		Create("UIListLayout", {
-			SortOrder = "LayoutOrder",
-			VerticalAlignment = "Center",
-			Padding = UDim.new(0, 2)
-		}),
-		Create("UIPadding", {
-			PaddingBottom = UDim.new(0, 5),
-			PaddingTop = UDim.new(0, 5)
-		}),
-		TitleL,
-		DescL,
-	})
 	
 	local function ButtonFrame(Instance, Title, Description, HolderSize)
 	local TitleL = InsertTheme(Create("TextLabel", {
@@ -588,7 +494,7 @@ local function PageFrame(Instance, Title, Description, HolderSize)
 		RichText = true
 	}), "DarkText")
 
-	local Frame = Make("Page", Instance, {
+	local Frame = Make("Button", Instance, {
 		Size = UDim2.new(1, 0, 0, 25),
 		AutomaticSize = "Y",
 		Name = "Option"
@@ -866,7 +772,7 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.15,
+		BackgroundTransparency = 0,
 		Name = "Hub"
 }), "Main")
 	Make("Gradient", MainFrame, {
