@@ -464,7 +464,7 @@ AddEle("Gradient", function(parent, props, ...)
 	return New
 end)
 	
-	local function ButtonFrame(Instance, Title, Description, HolderSize)
+local function ButtonFrame(Instance, Title, Description, HolderSize)
 	local TitleL = InsertTheme(Create("TextLabel", {
 		Font = Enum.Font.FredokaOne, --GothamMedium
 		TextColor3 = Theme["Color Text"],
@@ -772,6 +772,7 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
+		BackgroundColor3 = Color3.fromRGB(121, 121, 121),
 		BackgroundTransparency = 0,
 		Name = "Hub"
 }), "Main")
@@ -1365,7 +1366,7 @@ end
 			TIcon = false
 		end
 		
-		local TabSelect = Make("Page", MainScroll, {
+		local TabSelect = Make("Button", MainScroll, {
 			Size = UDim2.new(1, 0, 0, 24)
 		})Make("Corner", TabSelect)
 		
