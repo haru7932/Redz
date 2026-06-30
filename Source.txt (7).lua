@@ -1431,17 +1431,6 @@ function redzlib:MakeWindow(Configs)
 		Name = "Hub"
 	}), "Main")
 
-    local WindowBackground = Create("ImageLabel", MainFrame, {
-        Name = "WindowBackground",
-        Size = UDim2.new(1, 0, 1, 0),
-        Position = UDim2.new(0, 0, 0, 0),
-        BackgroundTransparency = 1,
-        Image = "rbxassetid://138241673975488", 
-        ImageTransparency = 0.07,
-        ScaleType = Enum.ScaleType.Crop,
-        ZIndex = 0
-    })
-
 	Make("Gradient", MainFrame, {
 		Rotation = 45
 	})MakeDrag(MainFrame)
