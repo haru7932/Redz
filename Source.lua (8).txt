@@ -44,8 +44,9 @@ local redzlib = {
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
-			["Color Theme"] = Color3.fromRGB(150, 0, 255),
+			["Color Theme"] = Color3.fromRGB(185, 35, 255),
 			["Color Text"] = Color3.fromRGB(240, 240, 240),
+			["Color SubTitle"] = Color3.fromRGB(43, 255, 0),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
 		}
 	},
@@ -55,7 +56,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Purple"
+		Theme = "Darker"
 	},
 	Settings = {},
 	Connection = {},
@@ -1252,7 +1253,7 @@ end)
 
 local function ButtonFrame(Instance, Title, Description, HolderSize)
 	local TitleL = InsertTheme(Create("TextLabel", {
-		Font = Enum.Font.GothamMedium,
+		Font = Enum.Font.FredokaOne,
 		TextColor3 = Theme["Color Text"],
 		Size = UDim2.new(1, -20),
 		AutomaticSize = "Y",
@@ -1436,7 +1437,6 @@ function redzlib:MakeWindow(Configs)
 	})MakeDrag(MainFrame)
 	
 	local MainCorner = Make("Corner", MainFrame)
-    local MainStroker = Make("Stroke", MainFrame, { Color = Theme["Color Theme"] })
 	
 	local Components = Create("Folder", MainFrame, {
 		Name = "Components"
@@ -1461,7 +1461,7 @@ function redzlib:MakeWindow(Configs)
 		TextSize = 12,
 		TextColor3 = Theme["Color Text"],
 		BackgroundTransparency = 1,
-		Font = Enum.Font.GothamBold,
+		Font = Enum.Font.FredokaOne,
 		Name = "Title"
 	}, {
 		InsertTheme(Create("TextLabel", {
@@ -1470,7 +1470,7 @@ function redzlib:MakeWindow(Configs)
 			AnchorPoint = Vector2.new(0, 1),
 			Position = UDim2.new(1, 5, 0.9),
 			Text = WMiniText,
-			TextColor3 = Theme["Color Dark Text"],
+			TextColor3 = Theme["Color SubTitle"],
 			BackgroundTransparency = 1,
 			TextXAlignment = "Left",
 			TextYAlignment = "Bottom",
@@ -1619,7 +1619,7 @@ function redzlib:MakeWindow(Configs)
 	end
 	function Window:AddMinimizeButton(Configs)
 		local Button = MakeDrag(Create("ImageButton", ScreenGui, {
-			Size = UDim2.fromOffset(35, 35),
+			Size = UDim2.fromOffset(45, 45),
 			Position = UDim2.fromScale(0.15, 0.15),
 			BackgroundTransparency = 1,
 			BackgroundColor3 = Theme["Color Hub 2"],
@@ -1716,7 +1716,6 @@ function redzlib:MakeWindow(Configs)
 			BackgroundColor3 = Theme["Color Stroke"],
 			Name = "Dialog"
 		}), "Stroke")
-        Make("Stroke", Screen, { Color = Theme["Color Theme"] })		
 		
 		MainCorner:Clone().Parent = Screen
 		Frame.Parent = Screen
@@ -1899,11 +1898,11 @@ function redzlib:MakeWindow(Configs)
 			})
 			
 			local SectionLabel = InsertTheme(Create("TextLabel", SectionFrame, {
-				Font = Enum.Font.GothamBold,
+				Font = Enum.Font.FredokaOne,
 				Text = SectionName,
-				TextColor3 = Theme["Color Text"],
+				TextColor3 = Theme["Color Theme"],
 				Size = UDim2.new(1, -25, 1, 0),
-				Position = UDim2.new(0, 5),
+				Position = UDim2.new(0, 10),
 				BackgroundTransparency = 1,
 				TextTruncate = "AtEnd",
 				TextSize = 14,
@@ -2634,7 +2633,6 @@ function redzlib:MakeWindow(Configs)
 				Position = UDim2.new(0, 0, 1),
 				BackgroundColor3 = Theme["Color Hub 2"]
 			}), "Frame")Make("Corner", FrameHolder)
-            Make("Stroke", FrameHolder, { Color = Theme["Color Theme"] })		
 			
 			local ImageLabel = Create("ImageLabel", FrameHolder, {
 				Size = UDim2.new(0, 30, 0, 30),
