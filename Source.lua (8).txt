@@ -1475,7 +1475,7 @@ function redzlib:MakeWindow(Configs)
 		TextSize = 12,
 		TextColor3 = Theme["Color Text"],
 		BackgroundTransparency = 1,
-		Font = Enum.Font.GothamMedium,
+		Font = Enum.Font.GothamBold,
 		Name = "Title"
 	}, {
 		InsertTheme(Create("TextLabel", {
@@ -1730,6 +1730,7 @@ function redzlib:MakeWindow(Configs)
 			BackgroundColor3 = Theme["Color Stroke"],
 			Name = "Dialog"
 		}), "Stroke")
+        Make("Stroke", Screen, { Color = Theme["Color Theme"] })		
 		
 		MainCorner:Clone().Parent = Screen
 		Frame.Parent = Screen
@@ -2647,6 +2648,7 @@ function redzlib:MakeWindow(Configs)
 				Position = UDim2.new(0, 0, 1),
 				BackgroundColor3 = Theme["Color Hub 2"]
 			}), "Frame")Make("Corner", FrameHolder)
+            Make("Stroke", FrameHolder, { Color = Theme["Color Theme"] })		
 			
 			local ImageLabel = Create("ImageLabel", FrameHolder, {
 				Size = UDim2.new(0, 30, 0, 30),
