@@ -1428,7 +1428,7 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.03,
+		BackgroundTransparency = 0,
 		Name = "Hub"
 	}), "Main")
 	Make("Gradient", MainFrame, {
@@ -1558,7 +1558,7 @@ function redzlib:MakeWindow(Configs)
 	})
 	
 	local CloseButton = Create("ImageButton", {
-		Size = UDim2.new(0, 14, 0, 14),
+		Size = UDim2.new(0, 22, 0, 22),
 		Position = UDim2.new(1, -10, 0.5),
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
@@ -1569,7 +1569,7 @@ function redzlib:MakeWindow(Configs)
 	
 	local MinimizeButton = SetProps(CloseButton:Clone(), {
 		Position = UDim2.new(1, -35, 0.5),
-		Image = "rbxassetid://10734896206",
+		Image = "rbxassetid://10734895530",
 		Name = "Minimize"
 	})
 	
@@ -1597,13 +1597,13 @@ function redzlib:MakeWindow(Configs)
 		WaitClick = true
 		
 		if Minimized then
-			MinimizeButton.Image = "rbxassetid://10734896206"
+			MinimizeButton.Image = "rbxassetid://10734895530"
 			CreateTween({MainFrame, "Size", SaveSize, 0.25, true})
 			ControlSize1.Visible = true
 			ControlSize2.Visible = true
 			Minimized = false
 		else
-			MinimizeButton.Image = "rbxassetid://10734924532"
+			MinimizeButton.Image = "rbxassetid://10734886496"
 			SaveSize = MainFrame.Size
 			ControlSize1.Visible = false
 			ControlSize2.Visible = false
