@@ -2671,8 +2671,8 @@ function redzlib:MakeWindow(Configs)
 				Text = "Join",
 				Font = Enum.Font.GothamBold,
 				TextSize = 12,
-				TextColor3 = Color3.fromRGB(255, 255, 255),
-				BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+				TextColor3 = Color3.fromRGB(220, 220, 220),
+				BackgroundColor3 = Color3.fromRGB(50, 150, 50)
 			})Make("Corner", JoinButton, UDim.new(0, 5))
 			
 			local ClickDelay
@@ -2688,8 +2688,8 @@ function redzlib:MakeWindow(Configs)
 				})task.wait(5)
 				SetProps(JoinButton, {
 					Text = "Join",
-					BackgroundColor3 = Color3.fromRGB(50, 50, 50),
-					TextColor3 = Color3.fromRGB(255, 255, 255)
+					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
+					TextColor3 = Color3.fromRGB(220, 220, 220)
 				})ClickDelay = false
 			end)
 			
